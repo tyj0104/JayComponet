@@ -77,18 +77,15 @@ dependencies {
             rootProject.ext.log4j,
             rootProject.ext.slf4jLog4j12,
 
-//            //Android
-//            rootProject.ext.jsr250,
-//            rootProject.ext.rxlifecycle2Version,
-//            rootProject.ext.rxlifecycle2,
-//            rootProject.ext.rxlifecycle2Android,
-//            rootProject.ext.rxlifecycle2Components,
-//            rootProject.ext.rxbinding2Version,
-//            rootProject.ext.rxbinding2,
-//            rootProject.ext.slf4jAndroid,
-
-
     )
+
+
+
+    compile 'com.google.guava:guava:20.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.trello.rxlifecycle2:rxlifecycle:2.0.1'
+    compile 'com.trello.rxlifecycle2:rxlifecycle-android:2.0.1'
+    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
 
 
 
