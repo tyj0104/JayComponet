@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -19,6 +21,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -26,13 +32,65 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.+'
+    testCompile 'junit:junit:4.12'
+
 
     compile(
+            //Android
+            rootProject.ext.supportAnnotations,
+            rootProject.ext.supportV4CoreUi,
+            rootProject.ext.supportRecyclerView,
             rootProject.ext.supportAppCompat,
+            rootProject.ext.supportCardView,
+            rootProject.ext.supportDesign,
+            rootProject.ext.supportLeanback,
+            rootProject.ext.supportMultiDex,
+            rootProject.ext.supportTestEspresso,
+            rootProject.ext.rxAndroid2,
+            rootProject.ext.glide,
+//
             rootProject.ext.rxpermissions2,
+
+            //Java
+            rootProject.ext.commonsLang3,
+            rootProject.ext.commonsCodec,
+            rootProject.ext.commonsIo,
+            rootProject.ext.guava,
+            rootProject.ext.gson,
+
+            //Http
+            rootProject.ext.retrofit2,
+            rootProject.ext.retrofit2GsonConverter,
+            rootProject.ext.retrofit2Rxjava2Adapter,
+            rootProject.ext.retrofit2GsonConverterScalar,
+            rootProject.ext.okhttp3Logging,
+            rootProject.ext.jsoup,
+            rootProject.ext.lombok,
+            rootProject.ext.rxJava2,
+            rootProject.ext.junit,
+            rootProject.ext.jxl,
+            //Groovy
+            rootProject.ext.groovy,
+
+            //Log
+            rootProject.ext.androidLoggingLog4j,
+            rootProject.ext.log4j,
+            rootProject.ext.slf4jLog4j12,
+
+//            //Android
+//            rootProject.ext.jsr250,
+//            rootProject.ext.rxlifecycle2Version,
+//            rootProject.ext.rxlifecycle2,
+//            rootProject.ext.rxlifecycle2Android,
+//            rootProject.ext.rxlifecycle2Components,
+//            rootProject.ext.rxbinding2Version,
+//            rootProject.ext.rxbinding2,
+//            rootProject.ext.slf4jAndroid,
+
+
     )
 
 
-    testCompile 'junit:junit:4.12'
+
+
 }
