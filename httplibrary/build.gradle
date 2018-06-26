@@ -12,7 +12,6 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -73,18 +72,18 @@ dependencies {
             rootProject.ext.retrofit2Rxjava2Adapter,
             rootProject.ext.retrofit2GsonConverterScalar,
             rootProject.ext.okhttp3Logging,
-            rootProject.ext.jsoup,
+           // rootProject.ext.jsoup,
             rootProject.ext.lombok,
             rootProject.ext.rxJava2,
             rootProject.ext.junit,
             rootProject.ext.jxl,
             //Groovy
-            rootProject.ext.groovy,
+          //  rootProject.ext.groovy,
 
             //Log
-            rootProject.ext.androidLoggingLog4j,
-            rootProject.ext.log4j,
-            rootProject.ext.slf4jLog4j12,
+//            rootProject.ext.androidLoggingLog4j,
+//            rootProject.ext.log4j,
+//            rootProject.ext.slf4jLog4j12,
 
     )
 
